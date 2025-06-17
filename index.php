@@ -11,15 +11,14 @@
     <!-- Header Section with Background Image -->
     <header>
         <div class="header-container">
-            <img src="images/logo.png" alt="TUPAD Logo" class="logo">
+            <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo">
             <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
             <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Admission</a>
-                <a href="#">LOG IN</a>
-                <a href="#">SIGN UP</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="about-us.php">About Us</a>
+                <a href="contact-us.php">Contact Us</a>
+                <a href="admission.php">Admission</a>
+                <a href="login.php">Log In</a>
             </nav>
         </div>
     </header>
@@ -30,19 +29,19 @@
         
         <div class="events">
             <div class="event-card">
-                <img src="src/img/1.png" alt="TUPAD Payout Event" class="event-image">
+                <img src="src/img/event1.png" alt="TUPAD Payout Event" class="event-image">
                 <div class="event-date">November 27, 2024</div>
                 <div class="event-location">TUPAD Payout | Dila-Dila, Santa Rita, Lubao, Pampanga</div>
             </div>
             
             <div class="event-card">
-                <img src="src/img/1.png" alt="TUPAD Payout Event" class="event-image">
+                <img src="src/img/event2.png" alt="TUPAD Payout Event" class="event-image">
                 <div class="event-date">January 27, 2025</div>
                 <div class="event-location">TUPAD Payout | Becutan, Santa Rita, Lubao, Pampanga</div>
             </div>
             
             <div class="event-card">
-                <img src="src/img/1.png" alt="TUPAD Payout Event" class="event-image">
+                <img src="src/img/event3.png" alt="TUPAD Payout Event" class="event-image">
                 <div class="event-date">March 20, 2025</div>
                 <div class="event-location">TUPAD Payout | San Joaquin, Santa Rita, Lubao, Pampanga</div>
             </div>

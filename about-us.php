@@ -2,105 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>TUPAD Admission System</title>
     <link rel="stylesheet" href="src/css/about-us.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="wrapper">
-        <aside id="sidebar">
-            <div class="d-flex">
-                <button class="toggle-btn" type="button" title="Toggle Sidebar" aria-label="Toggle Sidebar">
-                    <i class="lni lni-grid-alt" aria-hidden="true"></i>
-                </button>
-                <div class="sidebar-logo">
-                    <a href="#">ADMISSION SYSTEM</a>
-                </div>
+    <!-- Header Section with Background Image -->
+    <header>
+        <div class="header-container">
+            <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo">
+            <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
+            <nav>
+                <a href="index.php">Home</a>
+                <a href="about-us.php" class="active">About Us</a>
+                <a href="contact-us.php">Contact Us</a>
+                <a href="admission.php">Admission</a>
+                <a href="login.php">Log In</a>
+            </nav>
+        </div>
+    </header>
+
+          <main>
+    <section class="info-section">
+      <h2 class="section-title">About</h2>
+      <p>
+        The Smart Local Government Unit (LGU) Admission System is a web-based platform developed to enhance the implementation of the TUPAD Program (Tulong Panghanapbuhay sa Ating Disadvantaged/Displaced Workers) in Sta. Rita, Pampanga.
+      </p>
+
+      <h3>Our Purpose</h3>
+      <p>
+       In response to the growing demand for fair and efficient public service, this system was created to assist LGU officials and program coordinators in accurately verifying applicants' identities and removing 
+       duplicate entries from the TUPAD registry. Through this innovation, we seek to ensure that government aid reaches only the rightful and most deserving beneficiaries.
+      </p>
+
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to transform SANTA RITA into a progressive community propelled by socially enlightened leaders and empowered citizenry, spiritually committed to attain sustainable growth and optimum
+        development; to increase the capability and improve the quality of life of every citizen as we promote a more positive, dynamic, and responsive governance leading to aggressive growth ushered by genuine
+        public service geared towards a stronger economy and the capability building of Riteñans through the efficient and effective delivery of basic services, especially to the poor.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        Santa Rita, rising in holistic progress with a vibrant community where citizens are contented, healthy, skilled, and educated: that the Riteñans will have a sense of pride for their unique cultural 
+        and religous heritage, their own products, their own talents, the Municipal Government, and the place itself; that the whole citizenry will be committed in achieving sustainable growth and development, 
+        in the leadership of the LGU.
+      </p>
+    </section>
+  </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-main">Smart TUPAD Admission System | Powered by Digital Innovation<br>Make TUPAD Admission Simple, Fair, and Fast</p>
+            <div class="footer-links">
+                <p>PESO SANTA RITA, PAMPANGA</p>
+                <p>pesosantaritapamp.gov.ph</p>
             </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="landingpage.php" class="sidebar-link">
-                        <i class="lni lni-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="request.php" class="sidebar-link">
-                        <i class="lni lni-pencil"></i>
-                        <span>Request</span>
-                    </a>
-                </li>
-                <li class="sidebar-item active">
-                    <a href="about-us.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-comments"></i>
-                        <span>About Us</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="contact.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-phone"></i>
-                        <span>Contact Us</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="help.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-question-circle"></i>
-                        <span>Help Us</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="profile.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-user"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
-            </ul>
-        </aside>
-
-        <div class="main-content">
-            <div class="about-container">
-              <h1>ABOUT US</h1>
-               <div class="scroll-section">
-                <div class="section-box mission-box">
-                <h2>MISSION</h2>
-                 <p>
-                Barangay Calangain is committed to fostering a peaceful, progressive, and inclusive
-                community by promoting good governance, sustainable development, and active citizen participation.
-                We strive to improve the quality of life for all residents through efficient public services,
-                environmental stewardship, and programs that empower the youth, support livelihood opportunities.
-                With unity and dedication, we aim to build a resilient barangay that thrives in harmony, faith,
-                and shared prosperity.
-                </p>
-            </div>
-              <div class="section-box vision-box">
-                   <h2>VISION</h2>
-                 <p>
-                  Barangay Calangain is committed to:
-                 <ul>
-                  <li>Transparent and accountable governance for residents' welfare.</li>
-                  <li>Sustainable development through livelihood, education, and environment.</li>
-                  <li>Strengthening peace, order, and community safety.</li>
-                  <li>Empowering youth in leadership and faith-driven service.</li>
-                  </ul>
-                 </p>
-             </div>
-          </div>
-               </div>
-      
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="src/js/show.js"></script>
-    <script src="src/js/help.js"></script>
+        </div>
+    </footer>
 </body>
 </html>
