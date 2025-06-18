@@ -24,7 +24,7 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item active">
-                    <a href="dashboard.php" class="sidebar-link" >
+                    <a href="dashboard.php" class="sidebar-link">
                         <i class="lni lni-home"></i>
                         <span>Dashboard</span>
                     </a>
@@ -60,16 +60,75 @@
                     </a>
                 </li>
             </ul>
+    
         </aside>
 
         <div class="main">
             <nav class="navbar navbar-expand px-4 py-3">
-                <form action="#" class="d-none d-sm-inline-block">
-                    <!-- Optional form -->
-                </form>
+                <div class="header-content">
+                    <div class="header-logo">
+                        <img src="src/img/logo-sta.png" alt="Logo">
+                    </div>
+                    <div class="header-title">
+                        <h1>TUPAD ADMISSION</h1>
+                    </div>
+                </div>
             </nav>
+            
+      <main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="dashboard-header">
+            <h2>Dashboard</h2>
         </div>
 
+        <div class="stats-cards">
+            <a href="new-applications.html" class="card-link">
+                <div class="stats-card">
+                    <div class="card-number" id="new-app-count">245</div>
+                    <div class="card-title">
+                        <span class="icon-red">📩</span> New Application
+                    </div>
+                </div>
+            </a>
+
+            <a href="approved-applications.html" class="card-link">
+                <div class="stats-card">
+                    <div class="card-number" id="approved-app-count">158</div>
+                    <div class="card-title">
+                        <span class="icon-green">✅</span> Approved Applications
+                    </div>
+                </div>
+            </a>
+
+            <a href="approved-pending.html" class="card-link">
+                <div class="stats-card">
+                    <div class="card-number" id="approved-pending-count">87</div>
+                    <div class="card-title">
+                        <span class="icon-orange">⚠️</span> Approved Pending
+                    </div>
+                </div>
+            </a>
+
+            <a href="rejected-pending.html" class="card-link">
+                <div class="stats-card">
+                    <div class="card-number" id="rejected-pending-count">32</div>
+                    <div class="card-title">
+                        <span class="icon-red">❌</span> Rejected Pending
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="recent-applications">
+            <div class="recent-header">
+                <h3>Recent Application</h3>
+                <a href="#" class="view-all">View All</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

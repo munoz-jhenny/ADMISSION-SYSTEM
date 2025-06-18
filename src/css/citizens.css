@@ -1,10 +1,12 @@
 :root {
-    --font-primary: 'Poppins', sans-serif;
+    --font-primary: 'Inter', sans-serif;
     --color-bg: #fff;
     --color-bg-sidebar: #4E6009;
-    --color-bg-hover: rgba(255, 255, 255, 0.075);
+    --color-bg-hover: rgba(255, 255, 255, 0.3);
     --color-highlight: #000000;
     --color-text: #fff;
+    --color-text-dark: #000000;
+    --color-accent: #4143C4;
     --font-size-base: 0.9rem;
     --font-size-logo: 1.15rem;
     --font-size-icon: 1.5rem;
@@ -15,7 +17,6 @@
     --spacing-medium: 1.625rem;
     --transition-fast: 0.25s ease-in-out;
     --transition-medium: 0.35s ease-in-out;
-    
 }
 
 *,
@@ -36,6 +37,7 @@ li {
 
 body {
     font-family: var(--font-primary);
+
 }
 
 .wrapper {
@@ -43,7 +45,6 @@ body {
     width: 100%;
     min-height: 100vh;
 }
-
 
 #sidebar {
     width: 70px;
@@ -53,6 +54,7 @@ body {
     background-color: var(--color-bg-sidebar);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #sidebar.expand {
@@ -101,6 +103,7 @@ a.sidebar-link {
     border-left: 3px solid transparent;
 }
 
+
 .sidebar-link i {
     font-size: var(--font-size-sidebar-icon);
     margin-right: 0.75rem;
@@ -110,6 +113,7 @@ a.sidebar-link:hover {
     background-color: var(--color-bg-hover);
     border-left: 3px solid var(--color-highlight);
 }
+
 
 .sidebar-item {
     position: relative;
@@ -124,11 +128,147 @@ a.sidebar-link:hover {
     min-width: 200px;
 }
 
+
 /* Active sidebar item style */
 .sidebar-item.active a.sidebar-link {
     background-color: var(--color-bg-hover); 
     border-left: 3px solid var(--color-highlight); 
     font-weight: bold;
     color: var(--color-highlight);
+}
+
+.main {
+    flex: 1;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+}
+
+.navbar {
+    background-color: #4E6009;
+    box-shadow: none;
+    height: 113px;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.dashboard-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stats-card {
+    background: linear-gradient(0deg, rgba(255, 249, 249, 0.2), rgba(255, 249, 249, 0.2)), #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--color-text-dark);
+}
+
+.recent-applications {
+    background: linear-gradient(0deg, rgba(255, 249, 249, 0.2), rgba(255, 249, 249, 0.2)), #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.recent-header h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.view-all {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+.applicant-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-title h1 {
+        font-size: 2rem;
+    }
+    
+    .dashboard-header h2 {
+        font-size: 2rem;
+    }
 }
 
