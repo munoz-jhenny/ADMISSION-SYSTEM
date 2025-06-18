@@ -25,6 +25,7 @@
 
           <main>
     <section class="info-section">
+      <img src="src/img/tupad.jpg" alt="TUPAD Logo" class="about-logo">
       <h2 class="section-title">About</h2>
       <p>
         The Smart Local Government Unit (LGU) Admission System is a web-based platform developed to enhance the implementation of the TUPAD Program (Tulong Panghanapbuhay sa Ating Disadvantaged/Displaced Workers) in Sta. Rita, Pampanga.

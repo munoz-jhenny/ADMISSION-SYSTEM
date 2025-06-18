@@ -1,5 +1,4 @@
 :root {
-    /* Colors */
     --primary: #4E6009;
     --secondary: #FFFFFF;
     --text-dark: #000000;
@@ -8,11 +7,9 @@
     --background: #F7F7F7;
     --placeholder-color: #ACA1A1;
     --required-color: #FF0000;
-    
-    /* Fonts */
+
     --font-main: 'Inter', sans-serif;
-    
-    /* Spacing */
+
     --space-sm: 8px;
     --space-md: 16px;
     --space-lg: 24px;
@@ -33,8 +30,6 @@ body {
     line-height: 1.5;
 }
 
-
-
 /* Header Styles */
 header {
     background-color: var(--primary);
@@ -43,10 +38,22 @@ header {
     text-align: center;
 }
 
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    text-align: center;
+}
+
 .header-title {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: var(--space-lg);
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: var(--space-md);
 }
 
 nav {
@@ -68,6 +75,85 @@ nav a.active {
     text-decoration: underline;
 }
 
+/* Main Form Section */
+.admission-form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.form-section {
+    margin-bottom: var(--space-xl);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.required {
+    color: var(--required-color);
+    margin-left: 4px;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Upload Fields */
+.upload-group {
+    margin-bottom: var(--space-md);
+}
+
+.upload-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.upload-group input[type="file"] {
+    border: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: var(--space-md);
+    background-color: var(--primary);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+}
 
 /* Footer Styles */
 footer {
@@ -92,120 +178,26 @@ footer {
     margin-top: var(--space-md);
 }
 
-/* Add these new styles to your existing CSS */
-
-/* Header with Background Image */
-header {
-    background: linear-gradient(rgba(78, 96, 9, 0.8), rgba(78, 96, 9, 0.8)), 
-                url('images/header-bg.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    padding: var(--space-xl) 0;
-    color: var(--text-light);
+.upload-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
-    text-align: center;
+.upload-row .upload-group {
+    flex: 1;
+    min-width: 200px;
 }
 
-.logo {
-    height: 80px;
-    margin-bottom: var(--space-md);
-}
-
-/* Event Cards with Images */
-.event-card {
-    background: var(--secondary);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.event-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.upload-group input[type="file"] {
     display: block;
-}
-
-.event-details {
-    padding: var(--space-lg);
-}
-
-/* Footer with Optional Background */
-footer {
-    background: var(--primary);
-    /* Optional: If you want a footer background image */
-    /* background: linear-gradient(rgba(78, 96, 9, 0.9), rgba(78, 96, 9, 0.9)), 
-                url('images/footer-bg.jpg') no-repeat center center; */
-    background-size: cover;
-    padding: var(--space-xl) 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
-}
-
-/* Add these new styles to your existing CSS */
-
-/* Header with Background Image */
-header {
-    background: linear-gradient(rgba(78, 96, 9, 0.8), rgba(78, 96, 9, 0.8)), 
-                url('images/header-bg.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    padding: var(--space-xl) 0;
-    color: var(--text-light);
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
-    text-align: center;
-}
-
-.logo {
-    height: 80px;
-    margin-bottom: var(--space-md);
-}
-
-/* Event Cards with Images */
-.event-card {
-    background: var(--secondary);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.event-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.event-details {
-    padding: var(--space-lg);
-}
-
-/* Footer with Optional Background */
-footer {
-    background: var(--primary);
-    /* Optional: If you want a footer background image */
-    /* background: linear-gradient(rgba(78, 96, 9, 0.9), rgba(78, 96, 9, 0.9)), 
-                url('images/footer-bg.jpg') no-repeat center center; */
-    background-size: cover;
-    padding: var(--space-xl) 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
+    padding: var(--space-sm);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
 }
