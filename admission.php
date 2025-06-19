@@ -9,19 +9,22 @@
 </head>
 <body>
   <!-- Header Section -->
+
+  <div class="top-bar"></div>
   <header>
     <div class="header-container">
       <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo" />
       <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
-      <nav>
-        <a href="index.php">Home</a>
-        <a href="about-us.php">About Us</a>
-        <a href="contact-us.php">Contact Us</a>
-        <a href="admission.php" class="active">Admission</a>
-        <a href="login.php">Log In</a>
-      </nav>
     </div>
   </header>
+
+      <nav>
+          <a href="index.php">Home</a>
+          <a href="about-us.php">About Us</a>
+          <a href="contact-us.php">Contact Us</a>
+          <a href="admission.php" class="active">Admission</a>
+          <a href="login.php">Log In</a>
+      </nav>
 
   <main class="admission-form">
     <!-- Contact Info -->
@@ -58,21 +61,34 @@
       <div class="form-group"><input type="text" placeholder="Indicate the amount" required /></div>
     </section>
 
-    <!-- Upload Section (3 boxes side-by-side) -->
+    <!-- Upload Section -->
     <section class="form-section upload-row">
-      <div class="upload-group">
-        <label for="id">Valid ID (Photocopy)</label>
+    <div class="upload-group">
+        <label for="id">Valid ID</label>
+        <span class="sub-label">(Photocopy)</span>
+        <label class="custom-upload">
         <input type="file" id="id" accept="image/*" />
-      </div>
-      <div class="upload-group">
+        Upload File
+        </label>
+    </div>
+
+    <div class="upload-group">
         <label for="certificate">Certificate of Low Income</label>
+        <label class="custom-upload">
         <input type="file" id="certificate" accept="image/*" />
-      </div>
-      <div class="upload-group">
+        Upload File
+        </label>
+    </div>
+
+    <div class="upload-group">
         <label for="signature">Three (3) Specimen Signature</label>
+        <label class="custom-upload">
         <input type="file" id="signature" accept="image/*" multiple />
-      </div>
+        Upload File
+        </label>
+    </div>
     </section>
+
 
     <button type="submit" class="submit-btn">Submit</button>
   </main>

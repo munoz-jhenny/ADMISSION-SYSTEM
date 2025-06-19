@@ -9,10 +9,15 @@
 </head>
 <body>
     <!-- Header Section with Background Image -->
+
+    <div class="top-bar"></div>
     <header>
         <div class="header-container">
-            <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo">
+            <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo" />
             <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
+        </div>
+    </header>
+
             <nav>
                 <a href="index.php">Home</a>
                 <a href="about-us.php">About Us</a>
@@ -20,8 +25,6 @@
                 <a href="admission.php">Admission</a>
                 <a href="login.php">Log In</a>
             </nav>
-        </div>
-    </header>
 
     <!-- Contact Section -->
     <main>

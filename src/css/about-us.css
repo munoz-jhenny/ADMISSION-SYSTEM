@@ -1,10 +1,12 @@
 :root {
+    /* Colors */
     --primary: #4E6009;
     --secondary: #FFFFFF;
     --text-dark: #000000;
     --text-gray: #828282;
     --text-light: #FEF8F8;
     --background: #F7F7F7;
+    
     /* Fonts */
     --font-main: 'Inter', sans-serif;
     
@@ -30,13 +32,16 @@ body {
 }
 
 /* Header Styles */
+/* Header with Background Image */
 header {
-    background: linear-gradient(rgba(78, 96, 9, 0.8), rgba(78, 96, 9, 0.8)),
-                url('img/header-bg.jpg') no-repeat center center;
+    background: linear-gradient(rgba(78, 96, 9, 0.5), rgba(78, 96, 9, 0.2)), 
+                url('../img/header-bg.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     padding: var(--space-xl) 0;
     color: var(--text-light);
+    z-index: 1;
+    min-height: 220px;
 }
 
 .header-container {
@@ -44,17 +49,28 @@ header {
     margin: 0 auto;
     padding: 0 var(--space-xl);
     text-align: center;
+    z-index: 1;
 }
 
-.logo {
-    height: 80px;
-    margin-bottom: var(--space-md);
+.top-bar {
+    background-color: var(--primary); 
+    height: 50px;                     
+    width: 100%;
 }
 
 .header-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
+    margin-top: 50px;
     margin-bottom: var(--space-lg);
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 60px;
 }
 
 nav {
@@ -66,10 +82,10 @@ nav {
 }
 
 nav a {
-    color: var(--text-light);
+    color: var(--text-dark);
     text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.30rem;
+    font-weight: 700;
 }
 
 nav a.active {
