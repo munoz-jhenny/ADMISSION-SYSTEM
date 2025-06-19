@@ -106,6 +106,14 @@ main {
     margin: var(--space-2xl) 0;
 }
 
+.image {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto var(--space-xl);
+    margin-top: 20px;
+}
+
 .events {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,15 +130,33 @@ main {
 .event-date {
     font-weight: 600;
     margin-bottom: var(--space-sm);
+    margin-top: 10px;
 }
 
 .event-location {
     color: var(--text-gray);
 }
 
-.info-section {
-    margin: var(--space-2xl) 0;
+.event-card {
+    background: var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 6px; 
+}
+
+.event-details {
+    padding: var(--space-lg);
+}
+
 
 .info-title {
     font-size: 1.75rem;
@@ -143,7 +169,7 @@ main {
 }
 
 .info-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: var(--space-sm);
 }
@@ -151,10 +177,29 @@ main {
 .info-content p, .info-content ul {
     color: var(--text-gray);
     margin-bottom: var(--space-md);
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 .info-content ul {
     padding-left: var(--space-xl);
+}
+
+.info-section {
+    flex: 2;
+}
+
+.info-image {
+    flex: 1;
+    max-width: 320px;
+    margin-left: 50px;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
@@ -180,79 +225,11 @@ footer {
     margin-top: var(--space-md);
 }
 
-/* Add these new styles to your existing CSS */
-
-
-
-/* Event Cards with Images */
-.event-card {
-    background: var(--secondary);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.info-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
 }
 
-.event-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.event-details {
-    padding: var(--space-lg);
-}
-
-/* Footer with Optional Background */
-footer {
-    background: var(--primary);
-    /* Optional: If you want a footer background image */
-    /* background: linear-gradient(rgba(78, 96, 9, 0.9), rgba(78, 96, 9, 0.9)), 
-                url('images/footer-bg.jpg') no-repeat center center; */
-    background-size: cover;
-    padding: var(--space-xl) 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
-}
-
-
-
-
-/* Event Cards with Images */
-.event-card {
-    background: var(--secondary);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.event-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.event-details {
-    padding: var(--space-lg);
-}
-
-/* Footer with Optional Background */
-footer {
-    background: var(--primary);
-    /* Optional: If you want a footer background image */
-    /* background: linear-gradient(rgba(78, 96, 9, 0.9), rgba(78, 96, 9, 0.9)), 
-                url('images/footer-bg.jpg') no-repeat center center; */
-    background-size: cover;
-    padding: var(--space-xl) 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-xl);
-}
