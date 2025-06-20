@@ -6,6 +6,7 @@
     --text-gray: #828282;
     --text-light: #FEF8F8;
     --background: #F7F7F7;
+    --required: #ff0000;
     
     /* Fonts */
     --font-main: 'Inter', sans-serif;

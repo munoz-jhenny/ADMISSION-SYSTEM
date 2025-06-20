@@ -9,7 +9,9 @@
 </head>
 <body>
     <!-- Header Section -->
+     
     <div class="top-bar"></div>
+
     <header>
         <div class="header-container">
             <img src="src/img/logo-sta.png" alt="TUPAD Logo" class="logo" />
@@ -21,7 +23,7 @@
         <a href="index.php" class="active">Home</a>
         <a href="about-us.php">About Us</a>
         <a href="contact-us.php">Contact Us</a>
-        <a href="admission.php">Admission</a>
+        <a href="admission.php">Admission</a> 
         <a href="login.php">Log In</a>
     </nav>
 

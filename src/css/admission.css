@@ -6,6 +6,7 @@
     --text-gray: #828282;
     --text-light: #FEF8F8;
     --background: #F7F7F7;
+    --required: #ff0000;
     
     /* Fonts */
     --font-main: 'Inter', sans-serif;
@@ -93,6 +94,35 @@ nav a.active {
 }
 
 /* Main Form Section */
+main {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-2xl) 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background: none;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/tupad-bg.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .admission-form {
     max-width: 700px;
     margin: 40px auto;
@@ -111,7 +141,7 @@ nav a.active {
 }
 
 .required {
-    color: var(--required-color);
+    color: var(--required);
     margin-left: 4px;
 }
 
@@ -124,9 +154,11 @@ nav a.active {
     width: 100%;
     padding: var(--space-sm);
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
     color: var(--text-dark);
+    height: 40px;
+    background-color: transparent;
 }
 
 .form-row {
