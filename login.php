@@ -31,38 +31,50 @@
 
   <!-- Main -->
   <main>
-    <div class="form-box">
-      <img src="src/img/logo-sta.png" alt="Barangay Logo" class="form-logo">
-      <h2>Login</h2>
-      <form action="dashboard.php" method="POST">
-        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
-        <input type="email" name="email" placeholder="Enter Email" required><br>
-        <input type="password" name="password" placeholder="Enter Password" required><br>
-        <a href="forgot.php" class="forgot-link">Forgot Password?</a><br>
-        <button type="submit" name="btn-signin">LOG IN</button>
-      </form>
+    <div class="container" id="container">
 
-      <p class="signup-text">Don't have an account?
-        <button id="openSignup" class="signup-btn">Sign Up</button>
-      </p>
+      <!-- Sign Up Form -->
+      <div class="form-container sign-up-container">
+        <form action="dashboard/admin/authentication/admin-class.php" method="POST">
+          <h1>Sign Up</h1>
+          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
+          <input type="text" name="username" placeholder="Enter Username" required />
+          <input type="email" name="email" placeholder="Enter Email" required />
+          <input type="password" name="password" placeholder="Enter Password" required />
+          <button type="submit" name="btn-signup">SIGN UP</button>
+        </form>
+      </div>
+
+      <!-- Sign In Form -->
+      <div class="form-container sign-in-container">
+        <form action="dashboard.php" method="POST">
+          <h1>Log In</h1>
+          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
+          <input type="email" name="email" placeholder="Enter Email" required />
+          <input type="password" name="password" placeholder="Enter Password" required />
+          <a href="forgot.php" class="forgot-link">Forgot Password?</a>
+          <button type="submit" name="btn-signin">LOG IN</button>
+        </form>
+      </div>
+
+      <!-- Overlay Panels -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Log In</h1>
+            <p>Use your account to access the system.</p>
+            <button class="ghost" id="signIn">Log In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Sign Up</h1>
+            <p>Fill in the details to create your account.</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
-
-  <!-- SIGNUP MODAL -->
-  <div id="signupModal" class="modal">
-    <div class="modal-content">
-      <img src="src/img/logo-sta.png" alt="Barangay Logo" class="modal-logo">
-      <span class="close" id="closeSignup">&times;</span>
-      <h2>Sign Up</h2>
-      <form action="dashboard/admin/authentication/admin-class.php" method="POST">
-        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
-        <input type="text" name="username" placeholder="Enter Username" required><br>
-        <input type="email" name="email" placeholder="Enter Email" required><br>
-        <input type="password" name="password" placeholder="Enter Password" required><br>
-        <button type="submit" name="btn-signup">SIGN UP</button>
-      </form>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer>
@@ -77,18 +89,13 @@
 
   <!-- JavaScript -->
   <script>
-    const signupModal = document.getElementById("signupModal");
-    const openSignup = document.getElementById("openSignup");
-    const closeSignup = document.getElementById("closeSignup");
-
-    openSignup.onclick = () => signupModal.style.display = "block";
-    closeSignup.onclick = () => signupModal.style.display = "none";
-
-    window.onclick = (event) => {
-      if (event.target === signupModal) {
-        signupModal.style.display = "none";
-      }
-    };
+    const container = document.getElementById('container');
+    document.getElementById('signUp').addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+    });
+    document.getElementById('signIn').addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+    });
   </script>
 
 </body>
