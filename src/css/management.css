@@ -1,10 +1,12 @@
 :root {
-    --font-primary: 'Poppins', sans-serif;
+    --font-primary: 'Inter', sans-serif;
     --color-bg: #fff;
     --color-bg-sidebar: #4E6009;
-    --color-bg-hover: rgba(255, 255, 255, 0.075);
+    --color-bg-hover: rgba(255, 255, 255, 0.3);
     --color-highlight: #000000;
     --color-text: #fff;
+    --color-text-dark: #000000;
+    --color-accent: #4143C4;
     --font-size-base: 0.9rem;
     --font-size-logo: 1.15rem;
     --font-size-icon: 1.5rem;
@@ -15,7 +17,6 @@
     --spacing-medium: 1.625rem;
     --transition-fast: 0.25s ease-in-out;
     --transition-medium: 0.35s ease-in-out;
-    
 }
 
 *,
@@ -36,6 +37,7 @@ li {
 
 body {
     font-family: var(--font-primary);
+
 }
 
 .wrapper {
@@ -43,7 +45,6 @@ body {
     width: 100%;
     min-height: 100vh;
 }
-
 
 #sidebar {
     width: 70px;
@@ -53,6 +54,7 @@ body {
     background-color: var(--color-bg-sidebar);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #sidebar.expand {
@@ -101,6 +103,7 @@ a.sidebar-link {
     border-left: 3px solid transparent;
 }
 
+
 .sidebar-link i {
     font-size: var(--font-size-sidebar-icon);
     margin-right: 0.75rem;
@@ -110,6 +113,7 @@ a.sidebar-link:hover {
     background-color: var(--color-bg-hover);
     border-left: 3px solid var(--color-highlight);
 }
+
 
 .sidebar-item {
     position: relative;
@@ -124,6 +128,7 @@ a.sidebar-link:hover {
     min-width: 200px;
 }
 
+
 /* Active sidebar item style */
 .sidebar-item.active a.sidebar-link {
     background-color: var(--color-bg-hover); 
@@ -132,7 +137,62 @@ a.sidebar-link:hover {
     color: var(--color-highlight);
 }
 
-.out{
-    margin-bottom: 20px;
+.main {
+    flex: 1;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+}
+
+.navbar {
+    background-color: #4E6009;
+    box-shadow: none;
+    height: 113px;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)),
+                url('../img/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 1.5rem 0;
+    color: var(--color-text);
+    text-align: center;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-large);
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text);
+}
+
+.content {
+    padding: 2rem;
+}
+
+.dashboard-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    
+    .header-title h1 {
+        font-size: 2rem;
+    }
+    
+    .dashboard-header h2 {
+        font-size: 2rem;
+    }
 }
 

@@ -60,20 +60,14 @@
                     </a>
                 </li>
             </ul>
-    
         </aside>
 
         <div class="main">
-            <nav class="navbar navbar-expand px-4 py-3">
-                <div class="header-content">
-                    <div class="header-logo">
-                        <img src="src/img/logo-sta.png" alt="Logo">
-                    </div>
-                    <div class="header-title">
-                        <h1>TUPAD ADMISSION</h1>
-                    </div>
+            <header>
+                 <div class="header-container">
+                    <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
                 </div>
-            </nav>
+            </header>
             
       <main class="content px-3 py-4">
     <div class="container-fluid">
@@ -118,10 +112,27 @@
                 </div>
             </a>
         </div>
-
-
     </div>
 </main>
+
+        <div class="table-responsive">
+                    <table class="applicants-table table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Barangay</th>
+                                <th>Age</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicantsList">
+                            <tr>
+                                <td colspan="6" class="text-center">Loading applicants...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
         </div>
     </div>

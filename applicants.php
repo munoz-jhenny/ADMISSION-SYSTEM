@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applicants</title>
+    <title>Dashboard</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/applicants.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="src/css/dashboard.css">
 </head>
 
 <body>
@@ -58,19 +56,80 @@
                 <li class="sidebar-item">
                     <a href="management.php" class="sidebar-link collapsed has-dropdown">
                         <i class="lni lni-user"></i>
-                        <span>Mangement</span>
+                        <span>Management</span>
                     </a>
                 </li>
             </ul>
         </aside>
 
+        <div class="main">
+            <header>
+                 <div class="header-container">
+                    <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
+                </div>
+            </header>
+            
+      <main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="dashboard-header">
+            <h2>Applicants</h2>
+        </div>
+
+        <div class="applicants-container p-4">
+                <div class="applicants-header d-flex justify-content-between align-items-center mb-3">
+                    <h2>Applicant Records</h2>
+                    <div class="filter-controls d-flex align-items-center gap-2">
+                        <label for="filterStatus" class="visually-hidden">Filter applicants by status</label>
+                        <select id="filterStatus" class="form-select form-select-sm">
+                            <option value="all">All Applicants</option>
+                            <option value="brgy">Becuran</option>
+                            <option value="brgy">Dila-dila</option>
+                            <option value="brgy">San Agustin</option>
+                            <option value="brgy">San Basilio</option>
+                            <option value="brgy">San Isidro</option>
+                            <option value="brgy">San Jose</option>
+                            <option value="brgy">San Juan</option>
+                            <option value="brgy">San Matias</option>
+                            <option value="brgy">Santa Monica</option>
+                            <option value="brgy">San Vicente</option>
+                        </select>
+                        <button id="refreshBtn" class="btn btn-sm btn-primary px-2 py-1 d-flex align-items-center">
+                             <i class="lni lni-reload me-1 fs-6"></i> Refresh
+                        </button>
+
+                    </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="applicants-table table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Barangay</th>
+                                <th>Status</th>
+                                <th>Date Applied</th>
+                                <th>Verified</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="applicantsList">
+                            <tr>
+                                <td colspan="6" class="text-center">Loading applicants...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
 
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="src/js/show.js"></script>
-    <script src="src/js/help.js"></script>
+   
 </body>
 </html>

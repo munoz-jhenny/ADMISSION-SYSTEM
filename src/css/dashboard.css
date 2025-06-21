@@ -150,32 +150,27 @@ a.sidebar-link:hover {
     padding: 0;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 2rem;
-}
-
-.header-logo {
-    width: 80px;
-    height: 80px;
-    margin-right: 1rem;
-}
-
-.header-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.header-title h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
+header {
+    background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)),
+                url('../img/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 1.5rem 0;
     color: var(--color-text);
-    letter-spacing: -0.02em;
+    text-align: center;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-large);
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
     margin: 0;
+    color: var(--color-text);
 }
 
 .content {
@@ -202,6 +197,14 @@ a.sidebar-link:hover {
     border-radius: 18px;
     padding: 2rem;
     text-align: center;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: none;
 }
 
 .card-number {
@@ -242,12 +245,11 @@ a.sidebar-link:hover {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--color-accent);
+    text-decoration: none;
 }
 
-.applicant-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--color-text-dark);
+.view-all:hover {
+    text-decoration: none;
 }
 
 
@@ -271,3 +273,4 @@ a.sidebar-link:hover {
         font-size: 2rem;
     }
 }
+
