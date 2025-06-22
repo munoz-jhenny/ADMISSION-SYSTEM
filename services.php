@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Services</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/dashboard.css">
+    <link rel="stylesheet" href="src/css/services.css">
+
 </head>
 
 <body>
@@ -59,28 +60,64 @@
                         <span>Management</span>
                     </a>
                 </li>
+                 <li class="sidebar-item logout">
+                <a href="index.php" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Log Out</span>
+                </a>
+            </li>
             </ul>
         </aside>
 
         <div class="main">
             <header>
-                 <div class="header-container">
+                <div class="header-container">
                     <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
                 </div>
             </header>
             
-      <main class="content px-3 py-4">
-        <div class="container-fluid">
-            <div class="dashboard-header">
-                 <h2>Services</h2>
-            </div>
-
+            <main class="content px-3 py-4">
+                <div class="container-fluid">
+                    <div class="dashboard-header">
+                        <h2>Services</h2>
+                    </div>
+                    
+                     <div class="services-container">
+                        <!-- Service Card 1 -->
+                        <div class="service-card">
+                            <div>
+                                <h3 class="service-title">Applicant Registration</h3>
+                                <p class="service-description">Register New Applicants</p>
+                            </div>
+                            <div class="service-icon">AR</div>
+                        </div>
+                        
+                        <!-- Service Card 2 -->
+                        <div class="service-card">
+                            <div>
+                                <h3 class="service-title">Applicant Processing</h3>
+                                <p class="service-description">Process Applications</p>
+                            </div>
+                            <div class="service-icon">AP</div>
+                        </div>
+                        
+                        <!-- Service Card 3 -->
+                        <div class="service-card">
+                            <div>
+                                <h3 class="service-title">System Maintenance</h3>
+                                <p class="service-description">Perform Maintenance</p>
+                            </div>
+                            <div class="service-icon">SM</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="src/js/show.js"></script>
-   
 </body>
 </html>

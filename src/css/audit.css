@@ -184,6 +184,15 @@ header {
     margin-bottom: 2rem;
 }
 
+.sidebar-item.logout a.sidebar-link {
+    color: #fff;
+}
+
+.sidebar-item.logout a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 3px solid #1e1d1d;
+}
+
 
 @media (max-width: 768px) {
     

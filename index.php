@@ -63,11 +63,17 @@
                     <h3>What is TUPAD?</h3>
                     <p>TUPAD offers temporary employment ranging from 10 to 30 days, depending on the nature of the work. Beneficiaries engage in community-based projects such as:</p>
                     <ul>
-                        <li>Cleaning and sanitation of public spaces</li>
-                        <li>Repair and maintenance of community infrastructure</li>
+                        <li>Cleaning and sanitation of public markets, roads, and other communal spaces.</li>
+                        <li>Repair and maintenance of barangay roads, schools, and other infrastructure.</li>
                         <li>Disaster rehabilitation and recovery efforts</li>
-                        <li>Environmental protection activities like reforestation</li>
+                        <li>Tree planting, coastal cleanups, and other environmental protection activities.</li>
+                        <li>Basic community service initiatives identified by local government units (LGUs).</li>
                     </ul>
+                </div>
+
+                <div class="info-content">
+                    <h3>How TUPAD Works</h3>
+                    <p>Beneficiaries are paid based on the regional minimum wage and are covered by government-issued personal accident insurance through the Government Service Insurance System (GSIS) for the entire duration of their employment. The funds for wages are disbursed through accredited payment centers or digital payment platforms to ensure transparency and convenience. Prior to deployment, workers undergo a brief orientation on safety and health, as well as basic work protocols relevant to their assignments. Tools and safety gear, such as gloves, masks, and cleaning materials, are typically provided by DOLE or in partnership with the LGU.</p>
                 </div>
 
                 <div class="info-content">
@@ -75,7 +81,7 @@
                     <p>To qualify for TUPAD, applicants must:</p>
                     <ul>
                         <li>Be at least 18 years old.</li>
-                        <li>Be unemployed, underemployed, or self-employed with insufficient income.</li>
+                        <li>Be unemployed, underemployed, or self-employed but earning below the minimum income threshold,</li>
                         <li>Not be a current government employee.</li>
                         <li>Not have received TUPAD assistance within the same calendar year.</li>
                         <li>Only one member per household can avail of the program at a time.</li>

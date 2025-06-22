@@ -150,6 +150,16 @@ a.sidebar-link:hover {
     padding: 0;
 }
 
+.sidebar-item.logout a.sidebar-link {
+    color: #fff;
+}
+
+.sidebar-item.logout a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 3px solid #1e1d1d;
+}
+
+
 header {
     background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)),
                 url('../img/header-bg.jpg') no-repeat center center;
@@ -184,6 +194,97 @@ header {
     margin-bottom: 2rem;
 }
 
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.header {
+    background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)), 
+                url('../img/488583087_1116649407157141_7603308562067730815_n.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    opacity: 0.71;
+}
+
+.system-title {
+    font-size: 128px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.management-content {
+    padding: 40px;
+}
+
+.management-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #4E6009;
+}
+
+.management-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.management-card {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 40px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.management-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card-description {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1600px) {
+    .system-title {
+        font-size: 80px;
+    }
+    
+    .management-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     

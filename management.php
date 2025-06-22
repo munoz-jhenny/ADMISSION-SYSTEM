@@ -13,55 +13,65 @@
     <link rel="stylesheet" href="src/css/management.css">
 </head>
 <body>
-    <div class="wrapper">
-        <aside id="sidebar">
-            <div class="d-flex">
-                <button class="toggle-btn" type="button" aria-label="Toggle Sidebar">
-                    <i class="lni lni-grid-alt" aria-hidden="true"></i>
-                </button>
-                <div class="sidebar-logo">
-                    <a href="#">Admission System</a>
-                </div>
+        <div class="wrapper">
+            <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button" aria-label="Toggle Sidebar">
+                <i class="lni lni-grid-alt" aria-hidden="true"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="#">Admission System</a>
             </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                        <a href="dashboard.php" class="sidebar-link">
-                            <i class="lni lni-home"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="applicants.php" class="sidebar-link">
-                            <i class="lni lni-user"></i>
-                            <span>Applicants</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="citizens.php" class="sidebar-link collapsed has-dropdown">
-                            <i class="lni lni-comments"></i>
-                            <span>Citizens</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="audit.php" class="sidebar-link collapsed has-dropdown">
-                            <i class="lni lni-phone"></i>
-                            <span>Audit Reports</span>
-                        </a>
-                    </li>
-                <li class="sidebar-item">
-                    <a href="services.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-question-circle"></i>
-                        <span>Services</span>
-                    </a>
-                </li>
-                <li class="sidebar-item active">
-                    <a href="management.php" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Management</span>
-                    </a>
-                </li>
-            </ul>
-        </aside>
+        </div>
+        
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="dashboard.php" class="sidebar-link">
+                    <i class="lni lni-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="applicants.php" class="sidebar-link">
+                    <i class="lni lni-user"></i>
+                    <span>Applicants</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="citizens.php" class="sidebar-link collapsed has-dropdown">
+                    <i class="lni lni-comments"></i>
+                    <span>Citizens</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="audit.php" class="sidebar-link collapsed has-dropdown">
+                    <i class="lni lni-phone"></i>
+                    <span>Audit Reports</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="services.php" class="sidebar-link collapsed has-dropdown">
+                    <i class="lni lni-question-circle"></i>
+                    <span>Services</span>
+                </a>
+            </li>
+            <li class="sidebar-item active">
+                <a href="management.php" class="sidebar-link">
+                    <i class="lni lni-user"></i>
+                    <span>Management</span>
+                </a>
+            </li>
+            <li class="sidebar-item logout">
+                <a href="index.php" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Log Out</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
 
         <div class="main">
             <header>
@@ -71,15 +81,42 @@
             </header>
             
       <main class="content px-3 py-4">
-        <div class="container-fluid">
-            <div class="dashboard-header">
-                 <h2>Management</h2>
-            </div>
-
-                <a href="index.php" class="btn btn-danger out">Log Out</a>   
+            <div class="container-fluid">
+                <div class="dashboard-header">
+                    <h2>Management</h2>
+                </div>
                 
-        </div>
+                    <div class="management-cards">
+                    <!-- Staff List Card -->
+                    <a href="#" class="management-card">
+                        <i class="lni lni-users card-icon-symbol" aria-hidden="true"></i>
+                        <h3 class="card-title">Staff List</h3>
+                        <p class="card-description">View and manage the list of employees</p>
+                    </a>
 
+                    <!-- Roles Card -->
+                    <a href="#" class="management-card">
+                        <i class="lni lni-cog card-icon-symbol" aria-hidden="true"></i>
+                        <h3 class="card-title">Roles</h3>
+                        <p class="card-description">Define and update staff roles and permissions</p>
+                    </a>
+
+                    <!-- Add Staff Card -->
+                    <a href="#" class="management-card">
+                        <i class="lni lni-plus card-icon-symbol" aria-hidden="true"></i>
+                        <h3 class="card-title">Add Staff</h3>
+                        <p class="card-description">Register a new employee in the system</p>
+                    </a>
+
+                    <!-- Delete Staff Card -->
+                    <a href="#" class="management-card">
+                        <i class="lni lni-trash-can card-icon-symbol" aria-hidden="true"></i>
+                        <h3 class="card-title">Delete Staff</h3>
+                        <p class="card-description">Delete staff members from the system</p>
+                    </a>
+                </div>
+      </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
