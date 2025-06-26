@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="otp-container">
-        <img src="src/img/logobarangay.png" alt="Logo" class="logo">
+        <img src="src/img/logo-sta.png" alt="Logo" class="logo">
         <h1>Reset Password</h1>
         
         <form action="dashboard/admin/authentication//admin-class.php" method="POST">
