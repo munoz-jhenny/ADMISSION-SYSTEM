@@ -9,6 +9,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/dashboard.css">
+    <style>
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .btn-print {
+            background-color: #4E6009;
+            color: white;
+            border-color: #4E6009;
+        }
+
+        .btn-print:hover {
+            background-color: #3d4c07;
+            border-color: #3d4c07;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,38 +78,58 @@
                         <span>Management</span>
                     </a>
                 </li>
-                 <li class="sidebar-item logout">
-                <a href="index.php" class="sidebar-link">
-                    <i class="lni lni-exit"></i>
-                    <span>Log Out</span>
-                </a>
-            </li>
+                <li class="sidebar-item logout">
+                    <a href="index.php" class="sidebar-link">
+                        <i class="lni lni-exit"></i>
+                        <span>Log Out</span>
+                    </a>
+                </li>
             </ul>
         </aside>
 
         <div class="main">
             <header>
-                 <div class="header-container">
+                <div class="header-container">
                     <h1 class="header-title">TUPAD ADMISSION SYSTEM</h1>
                 </div>
             </header>
-            
-      <main class="content px-3 py-4">
-    <div class="container-fluid">
-        <div class="dashboard-header">
-            <h2>Audit Reports</h2>
+
+            <main class="content px-3 py-4">
+                <div class="container-fluid">
+                    <div class="dashboard-header">
+                        <h2>Audit Reports</h2>
+                    </div>
+
+                    <!-- Action buttons aligned right -->
+                    <div class="action-buttons">
+                        <button class="btn btn-outline-secondary" onclick="window.print()">Export PDF</button>
+                        <button class="btn btn-outline-secondary">Export CSV</button>
+                        <button class="btn btn-print">+ Print</button>
+                    </div>
+
+                    <table class="table table-bordered bg-white">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="text-center">DATE & TIME</th>
+                                <th class="text-center">USER</th>
+                                <th class="text-center">ROLE</th>
+                                <th class="text-center">DETAILS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4" class="text-center">Loading audit reports...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
         </div>
-
-        
-    
-
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="src/js/show.js"></script>
-   
 </body>
 </html>
