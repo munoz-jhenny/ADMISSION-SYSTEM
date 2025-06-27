@@ -294,6 +294,17 @@ header {
                 padding: 20px;
             }
         }
+
+        @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .services-container {
@@ -338,3 +349,47 @@ header {
     }
 }
 
+/* Responsive Design for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+
+     .dashboard-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Design for Smaller Screens */
+@media (max-width: 500px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .header-title {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ .service-card {
+     height: 180px;
+    padding: 20px;
+ }
+
+  .service-title {
+        font-size: 1.1rem;
+    }
+}

@@ -258,8 +258,8 @@ header {
 }
 
 .card-icon {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 30px;
 }
 
@@ -296,4 +296,65 @@ header {
         font-size: 2rem;
     }
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+     .dashboard-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Design for Smaller Screens */
+@media (max-width: 500px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .header-title {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.management-cards {
+        gap: 20px;
+    }
+
+    
+.card-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+}

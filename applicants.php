@@ -8,7 +8,7 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/dashboard.css">
+    <link rel="stylesheet" href="src/css/applicants.css">
 </head>
 
 <body>
@@ -81,9 +81,9 @@
             <h2>Applicants</h2>
         </div>
 
-        <div class="applicants-container p-4">
-                <div class="applicants-header d-flex justify-content-between align-items-center mb-3">
-                    <h2>Applicant Records</h2>
+       <div class="applicants-container">
+                    <div class="applicants-header">
+                            <h2>Applicant Records</h2>
                     <div class="filter-controls d-flex align-items-center gap-2">
                         <label for="filterStatus" class="visually-hidden">Filter applicants by status</label>
                         <select id="filterStatus" class="form-select form-select-sm">

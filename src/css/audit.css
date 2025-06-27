@@ -94,6 +94,16 @@ body {
     flex: 1 1 auto;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 a.sidebar-link {
     padding: var(--spacing-small) var(--spacing-medium);
     color: var(--color-text);
@@ -193,15 +203,71 @@ header {
     border-left: 3px solid #1e1d1d;
 }
 
+ .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .btn-print {
+            background-color: #4E6009;
+            color: white;
+            border-color: #4E6009;
+        }
+
+        .btn-print:hover {
+            background-color: #3d4c07;
+            border-color: #3d4c07;
+        }
 
 @media (max-width: 768px) {
     
     .header-title h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     
     .dashboard-header h2 {
-        font-size: 2rem;
+        font-size: 1.1rem;
     }
 }
 
+/* Responsive Design for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    table td {
+        font-size: 14px;
+    }
+
+}
+
+/* Mobile Design for Smaller Screens */
+@media (max-width: 500px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .header-title {
+    font-size: 1rem;
+    font-weight: 400;
+}
+    .btn-print {
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+}
