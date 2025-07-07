@@ -192,3 +192,64 @@ footer {
     gap: var(--space-2xl);
     margin-top: var(--space-md);
 }
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    height: 25px;                     
+    width: 50%;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.logo {
+    height: 100px;
+    top: 10px;
+    left: 30px;
+}
+
+}
+
+/* Mobile Design for Smaller Screens */
+@media (max-width: 500px) {
+.top-bar {
+    height: 25px;                     
+    width: 50%;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.logo {
+    height: 100px;
+    top: 10px;
+    left: 30px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.info-section h3 {
+    font-size: 1rem;
+    font-weight: 200;
+    margin: var(--space-2xl) 48px;
+}
+
+.info-section p,
+.info-section ul {
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--text-dark);
+    margin: var(--space-2xl) 23px;
+}
+
+}

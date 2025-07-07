@@ -29,17 +29,25 @@
     <!-- Contact Section -->
     <main>
         <section class="contact-section">
-            <h2>Contact Us</h2>
 
             <div class="contact-info">
                 <div class="contact-location">
                     <h3>Location</h3>
-                    <p>Municipal Hall of Sta. Rita<br>Sta. Rita, Pampanga, Philippines</p>
+                    <p>Municipal Hall Building, San Jose Street, Barangay San Jose, Sta. Rita, Pampanga, Philippines</p>
                     <p>Office Hours:<br>Monday – Friday, 8:00 AM – 5:00 PM</p>
                 </div>
                 <div class="contact-map">
-                    <img src="src/img/map.jpg" alt="Map location">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.565741716421!2d120.61565407472058!3d14.996369684441008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396edb6408fd4b9%3A0x6052447cbcb0240d!2sMunicipal%20Hall%20of%20Santa%20Rita%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1720322357485!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+
             </div>
 
             <div class="contact-form-wrapper">
