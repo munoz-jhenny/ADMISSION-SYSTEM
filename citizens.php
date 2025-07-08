@@ -19,7 +19,7 @@
                     <i class="lni lni-grid-alt" aria-hidden="true"></i>
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">Admission System</a>
+                    <a href="#">Admission</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
@@ -37,25 +37,31 @@
                 </li>
                 <li class="sidebar-item active">
                     <a href="citizens.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-comments"></i>
+                        <i class="lni lni-users"></i>
                         <span>Citizens</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="audit.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-phone"></i>
+                        <i class="lni lni-bar-chart"></i>
                         <span>Audit Reports</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a href="grievance.php" class="sidebar-link collapsed has-dropdown">
+                        <i class="lni lni-support"></i>
+                        <span>Grievance</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a href="services.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-question-circle"></i>
+                        <i class="lni lni-layers"></i>
                         <span>Services</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="management.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-user"></i>
+                        <i class="lni lni-cog"></i>
                         <span>Management</span>
                     </a>
                 </li>
