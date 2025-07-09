@@ -152,7 +152,7 @@ a.sidebar-link:hover {
 
 header {
     background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)),
-                url('../img/header-bg.jpg') no-repeat center center;
+                url('../../img/header-bg.jpg') no-repeat center center;
     background-size: cover;
     padding: 1.5rem 0;
     color: var(--color-text);

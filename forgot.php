@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Generate CSRF token if not set
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +22,11 @@
         <p>Enter your registered email:</p>
         
         <form action="dashboard/admin/authentication//admin-class.php" method="POST">
-        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <input type="text" name="email" placeholder="Enter Email"><br>
        <a href="forgot.php" class="forgot.php"></a>
         <button type="submit" name="btn-verify">Send Reset Link</button>
     </div>
-
+   
 </body>
 </html>

@@ -20,7 +20,7 @@
     </header>
 
     <nav>
-        <a href="index.php" class="active">Home</a>
+        <a href="home.php" class="active">Home</a>
         <a href="about-us.php">About Us</a>
         <a href="contact-us.php">Contact Us</a>
         <a href="admission.php">Admission</a> 

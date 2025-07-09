@@ -1,3 +1,24 @@
+<?php
+// reset-password.php
+
+// Start session
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+// Check if token is present
+if(!isset($_GET['token'])){
+    echo "<script>alert('No token provided.'); window.location.href = 'index.php';</script>";
+    exit;
+}
+
+$token = $_GET['token'];
+
+// Optionally, verify the token's existence and validity before showing the form
+// This can also be handled in the resetPassword method
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +39,6 @@
           <a href="password.php" class="password.php"></a>
         <button type="submit" name="btn-verify">Send Reset Link</button>
     </div>
-
+    
 </body>
 </html>

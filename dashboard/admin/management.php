@@ -10,7 +10,7 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/management.css">
+    <link rel="stylesheet" href="../../src/css/admin/management.css">
 </head>
 <body>
         <div class="wrapper">
@@ -26,7 +26,7 @@
         
         <ul class="sidebar-nav">
             <li class="sidebar-item">
-                <a href="dashboard.php" class="sidebar-link">
+                <a href="index.php" class="sidebar-link">
                     <i class="lni lni-home"></i>
                     <span>Dashboard</span>
                 </a>
@@ -68,7 +68,7 @@
                 </a>
             </li>
             <li class="sidebar-item logout">
-                <a href="index.php" class="sidebar-link">
+                <a href="../../login.php" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Log Out</span>
                 </a>
@@ -126,6 +126,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
-    <script src="src/js/show.js"></script>
+    <script src="../../src/js/show.js"></script>
 </body>
 </html>

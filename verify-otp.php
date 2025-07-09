@@ -22,6 +22,6 @@ include_once 'config/settings-configuration.php';
             <a href="login.php" class="login.php"></a>
         <button type="submit" name="btn-verify">VERIFY</button>
     </div>
-
+    
 </body>
 </html>

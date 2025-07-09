@@ -1,3 +1,48 @@
+<?php
+include_once 'config/settings-configuration.php';
+
+if (isset($_POST['btn-signin'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Prepare SQL to fetch the user by email
+    $stmt = $admin->runQuery("SELECT id, email, password, status FROM user WHERE email = :email");
+    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Check if user exists
+    if ($user) {
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            // Check if the user status is not 'active'
+            if ($user['status'] !== 'active') {
+                // Redirect or show message if user is not active
+                $_SESSION['error_message'] = "No account found with that email.";
+                header("Location: ../../login.php");
+                exit;
+            }
+
+            // If the status is 'active', proceed with login
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            // Redirect to dashboard or any other protected page
+            header("Location: ../../dashboard.php");
+            exit;
+        } else {
+            // Incorrect password
+            $_SESSION['error_message'] = "Incorrect email or password.";
+            header("Location: ../../login.php");
+            exit;
+        }
+    } else {
+        // User not found
+        $_SESSION['error_message'] = "User does not exist.";
+        header("Location: ../../login.php");
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +67,7 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="index.php">Home</a>
+    <a href="home.php">Home</a>
     <a href="about-us.php">About Us</a>
     <a href="contact-us.php">Contact Us</a>
     <a href="admission.php">Admission</a>
@@ -37,7 +82,7 @@
       <div class="form-container sign-up-container">
         <form action="dashboard/admin/authentication/admin-class.php" method="POST">
           <h1>Sign Up</h1>
-          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
+          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
           <input type="text" name="username" placeholder="Enter Username" required />
           <input type="email" name="email" placeholder="Enter Email" required />
           <input type="password" name="password" placeholder="Enter Password" required />
@@ -47,9 +92,9 @@
 
       <!-- Sign In Form -->
       <div class="form-container sign-in-container">
-        <form action="dashboard.php" method="POST">
+        <form action="dashboard/admin/authentication/admin-class.php" method="POST">
           <h1>Log In</h1>
-          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?? ''; ?>">
+          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
           <input type="email" name="email" placeholder="Enter Email" required />
           <input type="password" name="password" placeholder="Enter Password" required />
           <a href="forgot.php" class="forgot-link">Forgot Password?</a>

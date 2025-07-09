@@ -94,16 +94,6 @@ body {
     flex: 1 1 auto;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 a.sidebar-link {
     padding: var(--spacing-small) var(--spacing-medium);
     color: var(--color-text);
@@ -160,9 +150,19 @@ a.sidebar-link:hover {
     padding: 0;
 }
 
+.sidebar-item.logout a.sidebar-link {
+    color: #fff;
+}
+
+.sidebar-item.logout a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 3px solid #1e1d1d;
+}
+
+
 header {
     background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)),
-                url('../img/header-bg.jpg') no-repeat center center;
+                url('../../img/header-bg.jpg') no-repeat center center;
     background-size: cover;
     padding: 1.5rem 0;
     color: var(--color-text);
@@ -194,41 +194,115 @@ header {
     margin-bottom: 2rem;
 }
 
-.sidebar-item.logout a.sidebar-link {
-    color: #fff;
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
 }
 
-.sidebar-item.logout a.sidebar-link:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-left: 3px solid #1e1d1d;
+.header {
+    background: linear-gradient(rgba(78, 96, 9, 0.6), rgba(78, 96, 9, 0.3)), 
+                url('../img/488583087_1116649407157141_7603308562067730815_n.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    opacity: 0.71;
 }
 
- .action-buttons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
+.system-title {
+    font-size: 128px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-        .btn-print {
-            background-color: #4E6009;
-            color: white;
-            border-color: #4E6009;
-        }
+.management-content {
+    padding: 40px;
+}
 
-        .btn-print:hover {
-            background-color: #3d4c07;
-            border-color: #3d4c07;
-        }
+.management-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #4E6009;
+}
+
+.management-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.management-card {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 40px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.management-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card-description {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1600px) {
+    .system-title {
+        font-size: 80px;
+    }
+    
+    .management-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     
     .header-title h1 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
     
     .dashboard-header h2 {
-        font-size: 1.1rem;
+        font-size: 2rem;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -247,7 +321,9 @@ header {
     table td {
         font-size: 14px;
     }
-
+     .dashboard-header h2 {
+        font-size: 1.1rem;
+    }
 }
 
 /* Mobile Design for Smaller Screens */
@@ -263,11 +339,22 @@ header {
     font-size: 1rem;
     font-weight: 400;
 }
-    .btn-print {
-    padding: 5px 10px;
-    font-size: 10px;
-    font-weight: 300;
-    border-radius: 3px;
+
+.management-cards {
+        gap: 20px;
+    }
+
+    
+.card-title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
 }
 
 }
