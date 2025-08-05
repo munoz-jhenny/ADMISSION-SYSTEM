@@ -1,4 +1,7 @@
 <?php 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 class Database 
 { 
@@ -10,13 +13,14 @@ class Database
 
     public function __construct()
     {
-        if($_SERVER['SERVER_NAME'] === 'localhost'|| $_SERVER['SERVER_ADDR'] === '127.0.0.1'|| $_SERVER['SERVER_ADDR'] === '192.168.1.72'){
+        if ($_SERVER['SERVER_NAME'] === 'localhost' || 
+            $_SERVER['SERVER_ADDR'] === '127.0.0.1' || 
+            $_SERVER['SERVER_ADDR'] === '192.168.1.72') {
             $this->host = "localhost";
             $this->db_name = "admission";
             $this->username = "root";
             $this->password = "";
-        }
-        else{
+        } else {
             $this->host = "localhost";
             $this->db_name = "";
             $this->username = "";
@@ -28,11 +32,11 @@ class Database
     {
         $this->conn = null;
         try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name,
+                                  $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $exception)
-        {
-            echo "Connection error:" . $exception->getMessage();
+        } catch(PDOException $exception) {
+            echo "Connection error: " . $exception->getMessage();
         }
 
         return $this->conn;

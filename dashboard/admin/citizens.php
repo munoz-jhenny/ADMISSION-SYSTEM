@@ -99,7 +99,7 @@
 
                         <a href="#" class="card-link">
                             <div class="stats-card">
-                                <div class="card-number" id="eligible-count">854</div>
+                                <div class="card-number" id="eligible-count">no code</div>
                                 <div class="card-title">
                                     <span class="icon-green">✅</span> Eligible for TUPAD
                                 </div>
@@ -108,7 +108,7 @@
 
                         <a href="#" class="card-link">
                             <div class="stats-card">
-                                <div class="card-number" id="ineligible-count">245</div>
+                                <div class="card-number" id="ineligible-count">no code</div>
                                 <div class="card-title">
                                     <span class="icon-orange">❌</span> Ineligible Citizens
                                 </div>
@@ -117,7 +117,7 @@
 
                         <a href="#" class="card-link">
                             <div class="stats-card">
-                                <div class="card-number" id="review-count">151</div>
+                                <div class="card-number" id="review-count">no code</div>
                                 <div class="card-title">
                                     <span class="icon-red">🔄</span> Under Review
                                 </div>
