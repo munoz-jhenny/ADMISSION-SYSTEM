@@ -234,3 +234,40 @@ footer {
     flex-wrap: wrap;
 }
 
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px;
+  /* Space for eye icon */
+}
+.password-container {
+  position: relative;
+  width: 100%;
+  margin: 10px 0; /* same as input spacing */
+}
+
+.password-container input {
+  width: 300px;
+  padding: 12px 15px;
+  padding-right: 40px; /* space for eye icon */
+  border-radius: 5px;
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  left: 270px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-password:hover {
+  color: #333;
+}
+

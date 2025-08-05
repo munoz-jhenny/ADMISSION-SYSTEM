@@ -1,57 +1,65 @@
 <?php
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+  $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 include_once 'config/settings-configuration.php';
 
 if (isset($_POST['btn-signin'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
 
-    // Prepare SQL to fetch the user by email
-    $stmt = $admin->runQuery("SELECT id, email, password, status FROM user WHERE email = :email");
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-    $stmt->execute();
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+  // Prepare SQL to fetch the user by email
+  $stmt = $admin->runQuery("SELECT id, email, password, status FROM user WHERE email = :email");
+  $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+  $stmt->execute();
+  $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Check if user exists
-    if ($user) {
-        // Verify the password
-        if (password_verify($password, $user['password'])) {
-            // Check if the user status is not 'active'
-            if ($user['status'] !== 'active') {
-                // Redirect or show message if user is not active
-                $_SESSION['error_message'] = "No account found with that email.";
-                header("Location: ../../login.php");
-                exit;
-            }
-
-            // If the status is 'active', proceed with login
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
-            // Redirect to dashboard or any other protected page
-            header("Location: ../../dashboard.php");
-            exit;
-        } else {
-            // Incorrect password
-            $_SESSION['error_message'] = "Incorrect email or password.";
-            header("Location: ../../login.php");
-            exit;
-        }
-    } else {
-        // User not found
-        $_SESSION['error_message'] = "User does not exist.";
+  // Check if user exists
+  if ($user) {
+    // Verify the password
+    if (password_verify($password, $user['password'])) {
+      // Check if the user status is not 'active'
+      if ($user['status'] !== 'active') {
+        // Redirect or show message if user is not active
+        $_SESSION['error_message'] = "No account found with that email.";
         header("Location: ../../login.php");
         exit;
+      }
+
+      // If the status is 'active', proceed with login
+      $_SESSION['user_id'] = $user['id'];
+      $_SESSION['email'] = $user['email'];
+      // Redirect to dashboard or any other protected page
+      header("Location: ../../dashboard.php");
+      exit;
+    } else {
+      // Incorrect password
+      $_SESSION['error_message'] = "Incorrect email or password.";
+      header("Location: ../../login.php");
+      exit;
     }
+  } else {
+    // User not found
+    $_SESSION['error_message'] = "User does not exist.";
+    header("Location: ../../login.php");
+    exit;
+  }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TUPAD Admission System</title>
   <link rel="stylesheet" href="src/css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="src/js/eye_icon.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- Top Bar -->
@@ -78,29 +86,36 @@ if (isset($_POST['btn-signin'])) {
   <main>
     <div class="container" id="container">
 
-      <!-- Sign Up Form -->
-      <div class="form-container sign-up-container">
-        <form action="dashboard/admin/authentication/admin-class.php" method="POST">
-          <h1>Sign Up</h1>
-          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
-          <input type="text" name="username" placeholder="Enter Username" required />
-          <input type="email" name="email" placeholder="Enter Email" required />
-          <input type="password" name="password" placeholder="Enter Password" required />
-          <button type="submit" name="btn-signup">SIGN UP</button>
-        </form>
-      </div>
+  <!-- Sign Up Form -->
+<div class="form-container sign-up-container">
+  <form action="dashboard/admin/authentication/admin-class.php" method="POST">
+    <h1>Sign Up</h1>
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <input type="text" name="username" placeholder="Enter Username" required />
+    <input type="email" name="email" placeholder="Enter Email" required />
+    <div class="password-container">
+      <input type="password" id="signupPassword" name="password" placeholder="Enter Password" required />
+      <i class="fa-solid fa-eye toggle-password" id="toggleSignupPassword"></i>
+    </div>
+    <button type="submit" name="btn-signup">SIGN UP</button>
+  </form>
+</div>
 
-      <!-- Sign In Form -->
-      <div class="form-container sign-in-container">
-        <form action="dashboard/admin/authentication/admin-class.php" method="POST">
-          <h1>Log In</h1>
-          <input type="hidden" name="csrf_token" value="<?php echo $csrf_token?>">
-          <input type="email" name="email" placeholder="Enter Email" required />
-          <input type="password" name="password" placeholder="Enter Password" required />
-          <a href="forgot.php" class="forgot-link">Forgot Password?</a>
-          <button type="submit" name="btn-signin">LOG IN</button>
-        </form>
-      </div>
+<!-- Sign In Form -->
+<div class="form-container sign-in-container">
+  <form action="dashboard/admin/authentication/admin-class.php" method="POST">
+    <h1>Log In</h1>
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <input type="email" name="email" placeholder="Enter Email" required />
+    <div class="password-container">
+      <input type="password" id="loginPassword" name="password" placeholder="Enter Password" required />
+      <i class="fa-solid fa-eye toggle-password" id="toggleLoginPassword"></i>
+    </div>
+    <a href="forgot-password.php" class="forgot-link">Forgot Password?</a>
+    <button type="submit" name="btn-signin">LOG IN</button>
+  </form>
+</div>
+
 
       <!-- Overlay Panels -->
       <div class="overlay-container">
@@ -136,4 +151,5 @@ if (isset($_POST['btn-signin'])) {
   <script src="src/js/login.js"></script>
 
 </body>
+
 </html>
