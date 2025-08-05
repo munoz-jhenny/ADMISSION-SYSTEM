@@ -38,12 +38,6 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="citizens.php" class="sidebar-link collapsed has-dropdown">
-                    <i class="lni lni-users"></i>
-                    <span>Citizens</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
                 <a href="audit.php" class="sidebar-link collapsed has-dropdown">
                     <i class="lni lni-bar-chart"></i>
                     <span>Audit Reports</span>
