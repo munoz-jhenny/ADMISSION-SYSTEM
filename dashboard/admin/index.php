@@ -78,12 +78,6 @@ $applicants = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </a>
         </li>
         <li class="sidebar-item">
-          <a href="grievance.php" class="sidebar-link collapsed has-dropdown">
-            <i class="lni lni-support"></i>
-            <span>Grievance</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
           <a href="services.php" class="sidebar-link collapsed has-dropdown">
             <i class="lni lni-layers"></i>
             <span>Services</span>

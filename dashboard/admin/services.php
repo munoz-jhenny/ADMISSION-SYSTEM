@@ -42,12 +42,6 @@
                         <span>Audit Reports</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a href="grievance.php" class="sidebar-link collapsed has-dropdown">
-                        <i class="lni lni-support"></i>
-                        <span>Grievance</span>
-                    </a>
-                </li>
                 <li class="sidebar-item active">
                     <a href="services.php" class="sidebar-link collapsed has-dropdown">
                         <i class="lni lni-layers"></i>
